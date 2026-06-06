@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разработка приложения для записи клиентов — салоны красоты, iOS/Android от 149 000 ₽</title>
+  <meta name="description" content="Создаём своё мобильное приложение для салона красоты: онлайн-запись, push, RuStore. Не виджет YCLIENTS — ваш бренд. Смета за 24 часа. Россия.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <span class="top-bar__label">Россия :</span>
+      <a href="#forma" class="top-bar__link">Смета за 24 часа · от 149 000 ₽</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="logo">
+        <img class="logo__img" src="assets/logo.svg" width="54" height="54" alt="">
+        <span class="logo__text">
+          <span class="logo__name">SalonApp Dev</span>
+          <span class="logo__tagline">Разработка под ключ</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#dlya-kogo">Для кого</a></li>
+          <li><a href="#funkcii">Что входит</a></li>
+          <li><a href="#process">Как работаем</a></li>
+          <li><a href="#ceny">Цены</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <a href="#forma" class="btn btn--header">
+        <span class="btn__icon-circle" aria-hidden="true">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1.5v7M1.5 5h7" stroke="#f26522" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </span>
+        Получить смету
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="home-banner">
+      <div class="home-banner__caption">
+        <div class="container">
+          <div class="home-banner__content">
+            <h1>Своё приложение для записи клиентов — для салона красоты</h1>
+            <p>
+              Клиенты записываются с телефона. Ваш логотип в RuStore и App Store.
+              Не виджет на чужом сайте — полноценное приложение под ваш бренд.
+            </p>
+            <div class="home-banner__actions">
+              <a href="#forma" class="btn btn--hero">Получить смету за 24 часа</a>
+              <a href="#demo" class="btn btn--outline">Смотреть демо</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-banner__img" aria-hidden="true">
+        <img src="assets/on-saloon-b.webp" alt="" width="564" height="515" loading="eager">
+      </div>
+    </section>
+
+    <!-- Для кого -->
+    <section class="section section--light" id="dlya-kogo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Для кого <span>подходит</span> своё приложение</h2>
+          <p>
+            Разрабатываем мобильные решения для записи клиентов в салонах красоты и бьюти-бизнесе.
+            Если вы один мастер на дому — честно скажем, что SaaS выгоднее.
+          </p>
+        </div>
+
+        <div class="cards-grid cards-grid--4">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#f26522" stroke-width="2"/><path d="M10 14h12M10 18h8" stroke="#2d4053" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Салон 2–10 мастеров</h3>
+            <p class="card__pain">Клиенты пишут в Instagram и теряют записи</p>
+            <p>Единая онлайн-запись в приложении с вашим логотипом — iOS, Android и RuStore.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="10" cy="12" r="4" stroke="#f26522" stroke-width="2"/><circle cx="22" cy="12" r="4" stroke="#f26522" stroke-width="2"/><path d="M4 26c0-4 3-6 6-6s6 2 6 6M16 26c0-4 3-6 6-6s6 2 6 6" stroke="#2d4053" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Сеть салонов / франшиза</h3>
+            <p class="card__pain">Разные филиалы, нет единого бренда в сторе</p>
+            <p>Одно приложение сети с филиалами, ролями администраторов и общей базой клиентов.</p>
+          </article>
+
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24l4-12 4 6 4-10 4 16" stroke="#f26522" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="4" width="24" height="24" rx="4" stroke="#2d4053" stroke-width="2"/></svg>
+            </div>
+            <h3>Барбершоп</h3>
+            <p class="card__pain">Звонки, забытые записи, нет push-напоминаний</p>
+            <p>Слоты, услуги, мастера и автоматические напоминания клиентам перед визитом.</p>
+          </article>
+
+          <article class="card card--muted">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M16 8v8l5 3" stroke="#8a96a3" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="16" r="11" stroke="#8a96a3" stroke-width="2"/></svg>
+            </div>
+            <h3>Частный мастер (1 человек)</h3>
+            <p class="card__pain">Кастомное приложение окупается редко</p>
+            <p>Рекомендуем DIKIDI или YCLIENTS — <a href="#vs-yclients">сравнение ниже</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Что входит -->
+    <section class="section" id="funkcii">
+      <div class="container">
+        <div class="section-title">
+          <h2>Что входит в <span>приложение</span> для записи</h2>
+          <p>
+            Программа для записи клиентов с мобильной стороны для гостей и web-админкой для салона.
+            CRM для салона красоты — без лишних модулей, которые вы не используете.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature">
+            <span class="feature__num">01</span>
+            <h3>Онлайн-запись</h3>
+            <p>Услуги, мастера, свободные слоты — клиент выбирает и подтверждает за минуту.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">02</span>
+            <h3>Календарь и журнал</h3>
+            <p>Расписание на день и неделю, статусы записей, отмены и переносы.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">03</span>
+            <h3>Push-напоминания</h3>
+            <p>Автоматические уведомления клиенту за 24 ч и 2 ч до визита.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">04</span>
+            <h3>База клиентов</h3>
+            <p>История визитов, контакты, заметки администратора по каждому гостю.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">05</span>
+            <h3>Web-админка</h3>
+            <p>Управление услугами, мастерами и записями с компьютера владельца или админа.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">06</span>
+            <h3>Оплата / предоплата</h3>
+            <p>Интеграция ЮKassa — в пакете «Бизнес» или как доп. модуль.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">07</span>
+            <h3>RuStore и App Store</h3>
+            <p>Публикуем приложение под вашим названием и иконкой в магазинах.</p>
+          </div>
+          <div class="feature">
+            <span class="feature__num">08</span>
+            <h3>Базовая аналитика</h3>
+            <p>Записи, отмены, загрузка мастеров — цифры для принятия решений.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Как работаем -->
+    <section class="section section--light" id="process">
+      <div class="container">
+        <div class="section-title">
+          <h2>Как мы <span>работаем</span></h2>
+          <p>Разработка мобильного приложения под ключ — от созвона до публикации в сторах. Срок MVP — от 6 недель.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">1</span>
+            <h3>Созвон 30 мин</h3>
+            <p>Обсуждаем задачу, число мастеров и филиалов, дизайн и приоритеты функций.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">2</span>
+            <h3>Смета и ТЗ</h3>
+            <p>Фиксируем пакет, срок и стоимость. Отправляем смету в течение 24 часов после заявки.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">3</span>
+            <h3>Разработка</h3>
+            <p>Демо каждые 2 недели — видите прогресс и даёте обратную связь до релиза.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">4</span>
+            <h3>Публикация</h3>
+            <p>Выводим в RuStore и App Store / Google Play, передаём доступы и инструкцию админу.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="cta-banner">
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__text">
+          <p class="cta-banner__label">Не откладывайте</p>
+          <h2>Своё приложение салона — в RuStore за 6 недель</h2>
+        </div>
+        <a href="#forma" class="btn btn--hero btn--white">Получить смету</a>
+      </div>
+    </section>
+
+    <!-- Пакеты -->
+    <section class="section" id="ceny">
+      <div class="container">
+        <div class="section-title">
+          <h2>Пакеты и <span>стоимость</span> разработки</h2>
+          <p>Стоимость разработки мобильного приложения для записи — прозрачные пакеты без скрытых платежей.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Старт</h3>
+            <p class="pricing-card__for">Салон, пилот, 1 точка</p>
+            <p class="pricing-card__price">от <strong>149 000</strong> ₽</p>
+            <ul class="pricing-card__list">
+              <li>1 платформа: Android <em>или</em> iOS</li>
+              <li>Онлайн-запись, услуги, мастера</li>
+              <li>Push-напоминания</li>
+              <li>Web-админка</li>
+              <li>Публикация в RuStore</li>
+            </ul>
+            <a href="#forma" class="btn btn--outline btn--block">Выбрать Старт</a>
+          </article>
+
+          <article class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Популярный</span>
+            <h3>Бизнес</h3>
+            <p class="pricing-card__for">Салон 2–10 мастеров</p>
+            <p class="pricing-card__price">от <strong>249 000</strong> ₽</p>
+            <ul class="pricing-card__list">
+              <li>iOS + Android</li>
+              <li>Оплата через ЮKassa</li>
+              <li>Брендинг под салон</li>
+              <li>RuStore + App Store / Google Play</li>
+              <li>Всё из пакета Старт</li>
+            </ul>
+            <a href="#forma" class="btn btn--hero btn--block">Выбрать Бизнес</a>
+          </article>
+
+          <article class="pricing-card">
+            <h3>Сеть</h3>
+            <p class="pricing-card__for">3+ филиала, франшиза</p>
+            <p class="pricing-card__price">от <strong>390 000</strong> ₽</p>
+            <ul class="pricing-card__list">
+              <li>Филиалы и роли доступа</li>
+              <li>Отчёты по точкам</li>
+              <li>Приоритетная поддержка</li>
+              <li>Кастомная логика под сеть</li>
+              <li>Всё из пакета Бизнес</li>
+            </ul>
+            <a href="#forma" class="btn btn--outline btn--block">Обсудить Сеть</a>
+          </article>
+        </div>
+
+        <div class="pricing-notes">
+          <p>Аванс 40–50% · Поддержка от 12 000 ₽/мес (по желанию) · Уникальный дизайн +50–100 тыс. ₽</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- vs YCLIENTS -->
+    <section class="section section--light" id="vs-yclients">
+      <div class="container">
+        <div class="section-title">
+          <h2>Своё приложение <span>или YCLIENTS</span></h2>
+          <p>Мы не конкурируем с YCLIENTS за одиночного мастера — честно подскажем, если SaaS выгоднее.</p>
+        </div>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">YCLIENTS / DIKIDI</th>
+                <th scope="col">Ваше приложение</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Бренд в RuStore / App Store</th>
+                <td>Чужой / виджет</td>
+                <td class="compare-table__highlight"><strong>Ваш салон</strong></td>
+              </tr>
+              <tr>
+                <th scope="row">Стоимость входа</th>
+                <td>~2 000 ₽/мес</td>
+                <td class="compare-table__highlight">от 149 000 ₽ разово</td>
+              </tr>
+              <tr>
+                <th scope="row">Кастомная логика</th>
+                <td>Ограничена шаблоном</td>
+                <td class="compare-table__highlight">Полная под ваш процесс</td>
+              </tr>
+              <tr>
+                <th scope="row">TCO за 3 года</th>
+                <td>~54–144 тыс. ₽</td>
+                <td class="compare-table__highlight">149–249 тыс. ₽ + поддержка</td>
+              </tr>
+              <tr>
+                <th scope="row">Кому подходит</th>
+                <td>1 мастер, стандартный салон</td>
+                <td class="compare-table__highlight">Сеть, бренд, 2+ мастеров</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="compare-note">
+          Одиночному мастеру мы честно советуем DIKIDI. Салону от 2 мастеров — своё приложение
+          с вашим названием в магазине приложений.
+        </p>
+      </div>
+    </section>
+
+    <!-- Демо / кейс -->
+    <section class="section" id="demo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Пример <span>интерфейса</span> приложения</h2>
+          <p>Демо-прототип для салона на 4 мастеров: запись, выбор услуги и подтверждение визита.</p>
+        </div>
+
+        <div class="demo-layout">
+          <div class="demo-screens">
+            <figure class="demo-screen">
+              <div class="demo-screen__mock">
+                <span class="demo-screen__bar"></span>
+                <p class="demo-screen__title">Главная</p>
+                <p class="demo-screen__line">Выберите услугу</p>
+                <p class="demo-screen__line demo-screen__line--short">Маникюр · Педикюр</p>
+                <p class="demo-screen__line demo-screen__line--short">Стрижка · Окрашивание</p>
+              </div>
+              <figcaption>Главный экран</figcaption>
+            </figure>
+            <figure class="demo-screen">
+              <div class="demo-screen__mock demo-screen__mock--accent">
+                <span class="demo-screen__bar"></span>
+                <p class="demo-screen__title">Мастер и время</p>
+                <p class="demo-screen__line">Анна · 14:30</p>
+                <p class="demo-screen__line demo-screen__line--short">Ср, 12 июня</p>
+                <span class="demo-screen__btn">Записаться</span>
+              </div>
+              <figcaption>Выбор слота</figcaption>
+            </figure>
+            <figure class="demo-screen">
+              <div class="demo-screen__mock">
+                <span class="demo-screen__bar"></span>
+                <p class="demo-screen__title">Готово!</p>
+                <p class="demo-screen__line">Запись подтверждена</p>
+                <p class="demo-screen__line demo-screen__line--short">Push за 24 ч</p>
+              </div>
+              <figcaption>Подтверждение</figcaption>
+            </figure>
+          </div>
+
+          <div class="demo-aside">
+            <img src="assets/on-saloon-b.webp" alt="Мокап приложения для салона красоты" width="400" loading="lazy">
+            <ul class="demo-list">
+              <li>Запись за 3 шага — без звонков администратору</li>
+              <li>Ваш логотип и цвета салона</li>
+              <li>Push-напоминание клиенту перед визитом</li>
+            </ul>
+            <a href="#forma" class="btn btn--hero">Заказать разработку</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--light" id="faq">
+      <div class="container container--narrow">
+        <div class="section-title">
+          <h2>Частые <span>вопросы</span></h2>
+          <p>Ответы про стоимость, сроки и отличие от программы для записи в браузере.</p>
+        </div>
+
+        <div class="faq" role="list">
+          <details class="faq__item" open>
+            <summary class="faq__question">Сколько стоит приложение для записи клиентов?</summary>
+            <div class="faq__answer">
+              <p>От 149 000 ₽ (пакет «Старт», одна платформа) до 390 000 ₽+ для сети салонов.
+              Точная смета — после короткого созвона, отправляем в течение 24 часов.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">За сколько сделаете?</summary>
+            <div class="faq__answer">
+              <p>MVP для одного салона — от 6 недель. Сеть с филиалами — от 10–12 недель в зависимости от ТЗ.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Нужен ли свой сервер?</summary>
+            <div class="faq__answer">
+              <p>Да, нужен backend и база данных. Мы разворачиваем на вашем или арендованном VPS,
+              передаём доступы. Стоимость хостинга — от ~1 500 ₽/мес, не входит в разработку.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Чем отличается от программы для записи в браузере?</summary>
+            <div class="faq__answer">
+              <p>Мобильное приложение — ваш бренд в RuStore и App Store, push-уведомления,
+              быстрый доступ с иконки на телефоне. Браузерная программа — это виджет на чужом домене.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Можно ли потом добавить оплату?</summary>
+            <div class="faq__answer">
+              <p>Да. Оплата через ЮKassa входит в пакет «Бизнес» или добавляется отдельным модулем (+30–60 тыс. ₽).</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Публикуете в RuStore сами?</summary>
+            <div class="faq__answer">
+              <p>Да, берём на себя подготовку материалов, модерацию и публикацию под аккаунтом салона или нашим с передачей прав.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Делаете только beauty или другие ниши?</summary>
+            <div class="faq__answer">
+              <p>Фокус — салоны красоты, барбершопы и бьюти-сети. Другие ниши (фитнес, автосервис) — по запросу, но основной опыт в beauty.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Уже пользуемся YCLIENTS — имеет смысл своё?</summary>
+            <div class="faq__answer">
+              <p>Имеет, если важен бренд в сторе, особая логика (сеть, франшиза) или вы outgrow SaaS.
+              Можем интегрировать с YCLIENTS через API (+40–80 тыс. ₽).</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Какая гарантия и договор?</summary>
+            <div class="faq__answer">
+              <p>Работаем по договору ИП: фиксируем этапы, сроки и оплату. Гарантия на исправление багов — 3 месяца после сдачи.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">Что после запуска?</summary>
+            <div class="faq__answer">
+              <p>Опциональная поддержка от 12 000 ₽/мес: обновления OS, мелкие доработки, мониторинг.
+              Обучаем администратора работе с панелью.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="section section--form" id="forma">
+      <div class="container">
+        <div class="form-layout">
+          <div class="form-layout__info">
+            <h2>Получите смету за <span>24 часа</span></h2>
+            <p>Оставьте заявку — перезвоним или напишем в Telegram. Укажите число мастеров, чтобы мы сразу предложили подходящий пакет.</p>
+            <ul class="form-benefits">
+              <li>Бесплатный созвон 30 минут</li>
+              <li>Фиксированная смета без сюрпризов</li>
+              <li>Договор ИП, поэтапная оплата</li>
+            </ul>
+            <p class="form-telegram">
+              Или напишите в Telegram:
+              <a href="https://t.me/antonbutov" target="_blank" rel="noopener noreferrer" data-goal="click_telegram">@antonbutov</a>
+            </p>
+          </div>
+
+          <form
+            class="lead-form"
+            id="lead-form"
+            action="https://formspree.io/f/xreveddq"
+            method="POST"
+            novalidate
+          >
+            <input type="hidden" name="_subject" value="Заявка с лендинга — приложение для салона">
+            <div class="form-field">
+              <label for="name">Имя</label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
+            </div>
+
+            <div class="form-field">
+              <label for="contact">Telegram</label>
+              <input type="text" id="contact" name="contact" required autocomplete="username" placeholder="@username">
+            </div>
+
+            <div class="form-field">
+              <label for="business">Тип бизнеса</label>
+              <select id="business" name="business" required>
+                <option value="" disabled selected>Выберите</option>
+                <option value="salon">Салон красоты</option>
+                <option value="barbershop">Барбершоп</option>
+                <option value="network">Сеть / франшиза</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="masters">Сколько мастеров / точек?</label>
+              <select id="masters" name="masters" required>
+                <option value="" disabled selected>Выберите</option>
+                <option value="1">1 (частный мастер)</option>
+                <option value="2-5">2–5 мастеров</option>
+                <option value="6-10">6–10 мастеров</option>
+                <option value="network">3+ точки (сеть)</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="comment">Комментарий <span class="form-optional">(необязательно)</span></label>
+              <textarea id="comment" name="comment" rows="3" placeholder="Расскажите о задаче"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--hero btn--block">Отправить заявку</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="logo logo--footer">
+          <img class="logo__img" src="assets/logo.svg" width="44" height="44" alt="">
+          <span class="logo__name">SalonApp Dev</span>
+        </a>
+        <p class="footer__copy">© 2026 SalonApp Dev. Разработка приложений для записи клиентов.</p>
+      </div>
+
+      <div class="footer__legal">
+        <p>ИП Бутов Антон Сергеевич</p>
+        <p>ИНН 614302304615 · ОГРНИП 326619600045863</p>
+        <p><a href="mailto:mail@antonbutov.com">mail@antonbutov.com</a> · <a href="https://t.me/antonbutov" data-goal="click_telegram">Telegram</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+
+# Dev / reference screenshots (not used on site)
+assets/reference-*.png
+assets/ref-hero-*.png
+assets/our-hero-*.png
+assets/hero-phones-*.png
+assets/hero-phones-*.webp
+assets/valueappz-logo-ref.svg
+assets/on-saloon-b.png
