@@ -302,6 +302,7 @@ ul { list-style: none; }
   transform: translate(-50%, -50%);
   pointer-events: none;
   letter-spacing: 0;
+  z-index: 2;
   /* soften any residual EN letterforms on the asset */
   text-shadow:
     0 0 3px #f8f1eb,
@@ -312,9 +313,23 @@ ul { list-style: none; }
 .hero-service-label--wax {
   /* centered under wax icon (cx≈428px on 960 asset) */
   left: 44.6%;
-  top: 17.2%;
+  top: 23.6%;
   font-size: clamp(9px, 0.85vw, 11px);
   color: #0a0408;
+}
+
+.hero-service-label--wax::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 42px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: #f8f1eb;
+  filter: blur(2px);
+  z-index: -1;
 }
 
 .hero-service-label--hair {
@@ -323,6 +338,20 @@ ul { list-style: none; }
   top: 80.35%;
   font-size: clamp(9px, 0.9vw, 12px);
   color: #0f0f0f;
+}
+
+.hero-service-label--hair::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  width: 64px;
+  height: 26px;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  background: #f8f1eb;
+  filter: blur(2px);
+  z-index: -1;
 }
 
 .hero-service-label--manicure {
