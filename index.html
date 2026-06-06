@@ -4,51 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Разработка приложения для записи клиентов — салоны красоты, iOS/Android от 219 000 ₽</title>
-  <meta name="description" content="Создаём своё мобильное приложение для салона красоты: онлайн-запись, push, RuStore. Не виджет YCLIENTS — ваш бренд. Смета за 24 часа. Россия.">
+  <meta name="description" content="Создаём своё мобильное приложение для салона красоты: онлайн-запись, push, RuStore. Не виджет YCLIENTS — ваш бренд. Смета за 24 часа.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="top-bar">
-    <div class="container top-bar__inner">
-      <span class="top-bar__label">Россия :</span>
-      <a href="#forma" class="top-bar__link">Смета за 24 часа · от 219 000 ₽</a>
+
+  <div class="top-header">
+    <div class="inner">
+      <a href="#forma">Россия : Смета за 24 часа · от 219 000 ₽</a>
     </div>
   </div>
 
-  <header class="header">
-    <div class="container header__inner">
-      <a href="/" class="logo">
-        <img class="logo__img" src="assets/logo.svg" width="54" height="54" alt="">
-        <span class="logo__text">
-          <span class="logo__name">SalonApp Dev</span>
-          <span class="logo__tagline">Разработка под ключ</span>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="navbar-brand">
+        <img src="assets/logo.svg" width="48" height="48" alt="">
+        <span class="brand-text">
+          <span class="brand-name">SalonApp Dev</span>
+          <span class="brand-tagline">Разработка под ключ</span>
         </span>
       </a>
 
-      <nav class="nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li><a href="#dlya-kogo">Для кого</a></li>
-          <li><a href="#funkcii">Что входит</a></li>
-          <li><a href="#process">Как работаем</a></li>
-          <li><a href="#ceny">Цены</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
+      <nav class="navbar-nav" aria-label="Основная навигация">
+        <a class="nav-link" href="#models">Модели</a>
+        <a class="nav-link" href="#features">Функции</a>
+        <a class="nav-link" href="#process">Как работаем</a>
+        <a class="nav-link" href="#ceny">Цены</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="btn-main" href="#forma">Получить смету</a>
       </nav>
 
-      <a href="#forma" class="btn btn--header">
-        <span class="btn__icon-circle" aria-hidden="true">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1.5v7M1.5 5h7" stroke="#f26522" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </span>
-        Получить смету
-      </a>
-
-      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+      <button class="menu-toggler" type="button" aria-label="Открыть меню" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -56,96 +48,37 @@
 
   <main>
     <!-- Hero -->
-    <section class="home-banner home-banner--beauty">
-      <div class="home-banner__caption">
+    <section class="home-banner inner-banner-salon inner-banner-salon-beauty">
+      <div class="home-banner-caption">
         <div class="container">
-          <div class="home-banner__grid">
-            <div class="home-banner__content">
-              <h1>Своё приложение для записи клиентов — для салона красоты</h1>
+          <div class="hero-row">
+            <div class="home-banner-caption-iner">
+              <h1>Разработка приложения для записи клиентов — для салона красоты</h1>
               <p>
-                Клиенты записываются с телефона. Ваш логотип в RuStore и App Store.
-                Не виджет на чужом сайте — полноценное приложение под ваш бренд.
+                Своё мобильное приложение под ваш бренд: онлайн-запись, push-напоминания,
+                публикация в RuStore и App Store. Не виджет на чужом сайте — полноценное приложение.
               </p>
-              <a href="#forma" class="btn btn--hero">Получить смету за 24 часа</a>
+              <a href="#forma" class="btn-main">Получить смету за 24 часа</a>
             </div>
+            <div class="hero-spacer" aria-hidden="true"></div>
           </div>
         </div>
       </div>
-
-      <div class="home-banner__visual" aria-hidden="true">
-        <div class="hero-scene">
-          <div class="hero-float hero-float--avatar">
-            <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=240&h=240&fit=crop&crop=face" alt="" width="120" height="120" loading="eager">
-          </div>
-          <div class="hero-float hero-float--chip">
-            <span class="hero-float__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 4c-2 0-3.5 1.2-4 3-.5 1.8.5 3.5 2 4.5-1 .8-1.5 2-1.2 3.2.4 1.5 2 2.3 3.5 1.8" stroke="#f26522" stroke-width="1.5" stroke-linecap="round"/><path d="M8 18c1.5 1 3.5 1 5 0" stroke="#f26522" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </span>
-            <span class="hero-float__label">Волосы</span>
-          </div>
-          <div class="hero-float hero-float--chip hero-float--chip-top">
-            <span class="hero-float__icon hero-float__icon--sm">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M8 12c0-3 2-5 4-5s4 2 4 5" stroke="#f26522" stroke-width="1.5"/><path d="M6 20c0-2 2.5-3 6-3s6 1 6 3" stroke="#f26522" stroke-width="1.5"/></svg>
-            </span>
-            <span class="hero-float__label">Маникюр</span>
-          </div>
-
-          <div class="hero-phone">
-            <div class="hero-phone__shell">
-              <div class="hero-phone__notch"></div>
-              <div class="hero-phone__screen">
-                <header class="hero-app__header">
-                  <span class="hero-app__back">‹</span>
-                  <h3>Запись на услугу</h3>
-                </header>
-
-                <div class="hero-app__tabs">
-                  <span class="hero-app__tab hero-app__tab--active">В салоне</span>
-                  <span class="hero-app__tab">На дом</span>
-                </div>
-
-                <p class="hero-app__address">Москва, ул. Примерная, 12</p>
-
-                <ul class="hero-app__services">
-                  <li class="hero-app__service hero-app__service--active">
-                    <span class="hero-app__thumb" style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?w=80&h=80&fit=crop')"></span>
-                    <span class="hero-app__service-info">
-                      <strong>Стрижка</strong>
-                      <em>от 2 500 ₽</em>
-                    </span>
-                  </li>
-                  <li class="hero-app__service">
-                    <span class="hero-app__thumb" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=80&h=80&fit=crop')"></span>
-                    <span class="hero-app__service-info">
-                      <strong>Окрашивание</strong>
-                      <em>от 4 800 ₽</em>
-                    </span>
-                  </li>
-                </ul>
-
-                <div class="hero-app__booking">
-                  <div>
-                    <span class="hero-app__booking-label">Мастер</span>
-                    <strong>Анна · 14:30</strong>
-                  </div>
-                  <div>
-                    <span class="hero-app__booking-label">Дата</span>
-                    <strong>15 июня</strong>
-                  </div>
-                </div>
-
-                <nav class="hero-app__nav">
-                  <span></span><span></span><span class="hero-app__nav-active"></span><span></span><span></span>
-                </nav>
-              </div>
-            </div>
-          </div>
+      <div class="home-banner-img">
+        <div class="hero-phones-wrap">
+          <picture>
+            <source srcset="assets/on-saloon-b.webp?v=10" type="image/webp">
+            <img src="assets/on-saloon-b.png?v=10" class="img-fluid hero-phones-img" width="960" height="649" alt="" loading="eager" decoding="async">
+          </picture>
+          <span class="hero-service-label hero-service-label--wax" aria-hidden="true">Воск</span>
+          <span class="hero-service-label hero-service-label--hair" aria-hidden="true">Волосы</span>
+          <span class="hero-service-label hero-service-label--manicure" aria-hidden="true">Маникюр</span>
         </div>
       </div>
     </section>
 
-    <!-- Модели приложения (ValueAppz: Salon App Models) -->
-    <section class="models-section section--light" id="dlya-kogo">
+    <!-- Models -->
+    <section class="food-delivery-feature section-padding pb-0 bg-light" id="models">
       <div class="container">
         <div class="section-title">
           <h2>Разные <span>модели приложения</span> под задачи салона</h2>
@@ -156,224 +89,213 @@
         </div>
       </div>
 
-      <div class="model-block">
-        <div class="container model-block__inner">
-          <div class="model-block__visual" aria-hidden="true">
-            <div class="phone-mock phone-mock--booking">
-              <div class="phone-mock__screen">
-                <span class="phone-mock__title">Запись</span>
-                <div class="phone-mock__row"></div>
-                <div class="phone-mock__row phone-mock__row--short"></div>
-                <div class="phone-mock__slot"></div>
-                <div class="phone-mock__slot phone-mock__slot--active"></div>
-              </div>
+      <div class="we-get-inner customer-app">
+        <div class="container">
+          <div class="row">
+            <div class="visual">
+              <img src="assets/models/salon-appointment.png" alt="Платформа онлайн-записи" width="550" loading="lazy">
             </div>
-          </div>
-          <div class="model-block__caption">
-            <h2>Платформа <span>онлайн-записи</span> для салона</h2>
-            <p>Клиенты бронируют услуги с телефона — без звонков и переписки в мессенджерах. Ваш бренд в RuStore и App Store.</p>
-            <ul class="feature-list">
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2" stroke="#f26522" stroke-width="1.5"/><path d="M6 7h6M6 10h4" stroke="#2d4053" stroke-width="1.5" stroke-linecap="round"/></svg></span>Онлайн-запись и календарь</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3" stroke="#f26522" stroke-width="1.5"/><path d="M3 15c0-3 2.5-5 6-5s6 2 6 5" stroke="#2d4053" stroke-width="1.5"/></svg></span>Выбор мастера и услуги</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2v3M9 13v3M2 9h3M13 9h3" stroke="#f26522" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="3" stroke="#2d4053" stroke-width="1.5"/></svg></span>Push-напоминания клиентам</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 14l3-8 3 4 2-6 2 10" stroke="#f26522" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>База клиентов и история визитов</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="2" width="12" height="14" rx="2" stroke="#f26522" stroke-width="1.5"/><circle cx="9" cy="13" r="1" fill="#2d4053"/></svg></span>iOS, Android и RuStore</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4 4 8-8" stroke="#f26522" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Web-админка для салона</li>
-            </ul>
-            <a href="#forma" class="btn btn--hero">Получить смету</a>
+            <div class="ca-caption">
+              <h2>Платформа <span>онлайн-записи</span> для салона</h2>
+              <p>Клиенты бронируют услуги с телефона — без звонков и переписки в мессенджерах. Ваш бренд в RuStore и App Store.</p>
+              <ul class="we-get-listing">
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Онлайн-запись и календарь</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Выбор мастера и услуги</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Push-напоминания клиентам</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">База клиентов и история</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">iOS, Android и RuStore</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Web-админка для салона</span></li>
+              </ul>
+              <a href="#forma" class="btn-main">Получить смету</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="model-block model-block--reverse">
-        <div class="container model-block__inner">
-          <div class="model-block__visual" aria-hidden="true">
-            <div class="phone-mock phone-mock--network">
-              <div class="phone-mock__screen phone-mock__screen--purple">
-                <span class="phone-mock__title">Сеть · 4 филиала</span>
-                <div class="phone-mock__branch"></div>
-                <div class="phone-mock__branch"></div>
-                <div class="phone-mock__branch phone-mock__branch--active"></div>
-              </div>
+      <div class="we-get-inner merchant-app flex-row-reverse">
+        <div class="container">
+          <div class="row">
+            <div class="visual">
+              <img src="assets/models/on-demand-beauty-marketplace.png" alt="Приложение сети салонов" width="500" loading="lazy">
             </div>
-          </div>
-          <div class="model-block__caption">
-            <h2>Приложение <span>сети салонов</span> и франшизы</h2>
-            <p>Единый бренд в магазине приложений: филиалы, роли администраторов, общая база клиентов и отчёты по точкам.</p>
-            <ul class="feature-list">
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 6h12v8H3z" stroke="#f26522" stroke-width="1.5"/><path d="M6 6V4h6v2" stroke="#2d4053" stroke-width="1.5"/></svg></span>Несколько филиалов в одном приложении</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="6" cy="7" r="2" stroke="#f26522" stroke-width="1.5"/><circle cx="12" cy="7" r="2" stroke="#f26522" stroke-width="1.5"/><path d="M2 14c0-2 2-3 4-3s4 1 4 3M10 14c0-2 2-3 4-3s4 1 4 3" stroke="#2d4053" stroke-width="1.5"/></svg></span>Роли: владелец, админ, мастер</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="4" width="14" height="10" rx="1" stroke="#f26522" stroke-width="1.5"/><path d="M5 12h3M10 12h3M5 9h8" stroke="#2d4053" stroke-width="1.5" stroke-linecap="round"/></svg></span>Отчёты по загрузке и выручке</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#f26522" stroke-width="1.5"/><path d="M9 6v3l2 2" stroke="#2d4053" stroke-width="1.5" stroke-linecap="round"/></svg></span>Единый журнал записей</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4h10v10H4z" stroke="#f26522" stroke-width="1.5"/><path d="M7 7h4M7 10h6" stroke="#2d4053" stroke-width="1.5" stroke-linecap="round"/></svg></span>Брендинг под сеть</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2l2 4 4 .5-3 3 1 4-4-2-4 2 1-4-3-3 4-.5z" stroke="#f26522" stroke-width="1.2" stroke-linejoin="round"/></svg></span>Приоритетная поддержка</li>
-            </ul>
-            <a href="#forma" class="btn btn--hero">Получить смету</a>
+            <div class="ca-caption">
+              <h2>Приложение <span>сети салонов</span> и франшизы</h2>
+              <p>Единый бренд в магазине приложений: филиалы, роли администраторов, общая база клиентов и отчёты по точкам.</p>
+              <ul class="we-get-listing">
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Несколько филиалов</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Роли: владелец, админ, мастер</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Отчёты по точкам</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Единый журнал записей</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Брендинг под сеть</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Приоритетная поддержка</span></li>
+              </ul>
+              <a href="#forma" class="btn-main">Получить смету</a>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="model-block">
-        <div class="container model-block__inner">
-          <div class="model-block__visual" aria-hidden="true">
-            <div class="phone-mock phone-mock--admin">
-              <div class="phone-mock__screen phone-mock__screen--wide">
-                <span class="phone-mock__title">Админ-панель</span>
-                <div class="phone-mock__dash">
-                  <div class="phone-mock__stat"></div>
-                  <div class="phone-mock__stat"></div>
-                  <div class="phone-mock__stat"></div>
-                </div>
-                <div class="phone-mock__chart"></div>
-              </div>
+      <div class="we-get-inner admin-dashboard">
+        <div class="container">
+          <div class="row">
+            <div class="visual">
+              <img src="assets/models/hair-salon.png" alt="Барбершоп и салон" width="500" loading="lazy">
             </div>
-          </div>
-          <div class="model-block__caption">
-            <h2>Барбершоп и <span>салон 2–10 мастеров</span></h2>
-            <p>Слоты, услуги, мастера и автоматические напоминания — без звонков и потерянных записей в Instagram.</p>
-            <ul class="feature-list">
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4h10M4 9h10M4 14h6" stroke="#f26522" stroke-width="1.5" stroke-linecap="round"/></svg></span>Журнал на день и неделю</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="3" width="12" height="12" rx="2" stroke="#f26522" stroke-width="1.5"/><path d="M6 9h6" stroke="#2d4053" stroke-width="1.5"/></svg></span>Управление услугами и ценами</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="#f26522" stroke-width="1.5" stroke-linecap="round"/></svg></span>Отмены и переносы в один клик</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#f26522" stroke-width="1.5"/><path d="M9 6v4" stroke="#2d4053" stroke-width="1.5" stroke-linecap="round"/></svg></span>Напоминания за 24 ч и 2 ч</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 13l4-8 3 4 2-5 3 9" stroke="#f26522" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Базовая аналитика записей</li>
-              <li><span class="feature-list__icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="5" width="14" height="8" rx="1" stroke="#f26522" stroke-width="1.5"/><path d="M2 8h14" stroke="#2d4053" stroke-width="1.5"/></svg></span>Оплата через ЮKassa (опция)</li>
-            </ul>
-            <a href="#forma" class="btn btn--hero">Получить смету</a>
+            <div class="ca-caption">
+              <h2>Барбершоп и <span>салон 2–10 мастеров</span></h2>
+              <p>Слоты, услуги, мастера и автоматические напоминания — без звонков и потерянных записей в Instagram.</p>
+              <ul class="we-get-listing">
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Журнал на день и неделю</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Управление услугами и ценами</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Отмены и переносы в один клик</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Напоминания за 24 ч и 2 ч</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Базовая аналитика</span></li>
+                <li><span class="listing-img"><img src="assets/icons/feature-check.svg" alt="" width="22" height="22"></span><span class="listing-text">Оплата через ЮKassa</span></li>
+              </ul>
+              <a href="#forma" class="btn-main">Получить смету</a>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="container audience-note">
-        <p class="audience-note__text">
-          <strong>Частный мастер на дому?</strong> Кастомное приложение окупается редко — рекомендуем DIKIDI или YCLIENTS.
-          <a href="#vs-yclients">Сравнение ниже →</a>
-        </p>
+        <p><strong>Частный мастер на дому?</strong> Кастомное приложение окупается редко — рекомендуем DIKIDI или YCLIENTS. <a href="#vs-yclients">Сравнение ниже →</a></p>
       </div>
     </section>
 
-    <!-- Что входит -->
-    <section class="section" id="funkcii">
+    <!-- CTA banner -->
+    <section class="marketplace-online">
+      <div class="marketplace-inner">
+        <img src="assets/icons/feature-check.svg" alt="" loading="lazy">
+        <div class="marketplace-inner-caption">
+          <h4>Не откладывайте</h4>
+          <h2>Своё приложение салона — в RuStore за 6 недель</h2>
+          <a href="#forma" class="btn-main btn-main--white">Получить смету</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution packed -->
+    <section class="business-model section-padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Полное <span>решение</span> для салона красоты</h2>
+          <p>Мобильное приложение для клиентов, web-админка для салона и backend под ваш бренд.</p>
+        </div>
+        <div class="business-model-diagram d-lg-block">
+          <img src="assets/models/customer-apptab.png" alt="Схема решения" loading="lazy">
+        </div>
+        <div class="business-model-row">
+          <div class="business-model-grid">
+            <h3>Приложение для клиентов</h3>
+            <p class="mb-3">Запись, выбор мастера, push-напоминания — ваш бренд в RuStore и App Store.</p>
+            <a href="#forma" class="btn-main">Начать</a>
+          </div>
+          <div class="business-model-grid">
+            <h3>Web-админка</h3>
+            <p class="mb-3">Календарь, услуги, мастера и база клиентов — с компьютера владельца или админа.</p>
+            <a href="#forma" class="btn-main">Начать</a>
+          </div>
+          <div class="business-model-grid">
+            <h3>Backend и публикация</h3>
+            <p class="mb-3">Сервер, база данных, вывод в магазины приложений — берём на себя.</p>
+            <a href="#forma" class="btn-main">Начать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section class="customer-story section-padding bg-light" id="solutions">
+      <div class="container">
+        <div class="section-title">
+          <h2><span>Экономьте время</span> с готовыми решениями<br> для салона красоты</h2>
+          <p>Подберём архитектуру под ваш масштаб — от одного салона до сети филиалов.</p>
+        </div>
+        <div class="tabs-layout">
+          <div class="tab-panels">
+            <div class="tab-content-panel is-active" data-tab-panel="salon">
+              <h4>Приложение для одного салона</h4>
+              <p>Классическая онлайн-запись: услуги, мастера, слоты, push-напоминания. MVP за 6 недель, публикация в RuStore и App Store под вашим названием.</p>
+              <img src="assets/models/customer-apptab.png" alt="Приложение салона" loading="lazy">
+            </div>
+            <div class="tab-content-panel" data-tab-panel="network">
+              <h4>Приложение сети и франшизы</h4>
+              <p>Несколько филиалов, роли доступа, отчёты по точкам. Единый бренд в магазине приложений — клиент выбирает салон рядом и записывается в один клик.</p>
+              <img src="assets/models/urban-company.png" alt="Сеть салонов" loading="lazy">
+            </div>
+            <div class="tab-content-panel" data-tab-panel="barber">
+              <h4>Барбершоп и салон 2–10 мастеров</h4>
+              <p>Журнал на день, услуги, мастера, автоматические напоминания. Без звонков и потерянных записей в Instagram и WhatsApp.</p>
+              <img src="assets/models/styleseat.png" alt="Барбершоп" loading="lazy">
+            </div>
+          </div>
+          <div class="tab-nav" role="tablist">
+            <button type="button" class="is-active" data-tab="salon" role="tab">Один салон</button>
+            <button type="button" data-tab="network" role="tab">Сеть / франшиза</button>
+            <button type="button" data-tab="barber" role="tab">Барбершоп</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section-padding" id="features">
       <div class="container">
         <div class="section-title">
           <h2>Что входит в <span>приложение</span> для записи</h2>
-          <p>
-            Программа для записи клиентов с мобильной стороны для гостей и web-админкой для салона.
-            CRM для салона красоты — без лишних модулей, которые вы не используете.
-          </p>
+          <p>Программа для записи клиентов с мобильной стороны для гостей и web-админкой для салона.</p>
         </div>
-
         <div class="features-grid">
-          <div class="feature">
-            <span class="feature__num">01</span>
-            <h3>Онлайн-запись</h3>
-            <p>Услуги, мастера, свободные слоты — клиент выбирает и подтверждает за минуту.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">02</span>
-            <h3>Календарь и журнал</h3>
-            <p>Расписание на день и неделю, статусы записей, отмены и переносы.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">03</span>
-            <h3>Push-напоминания</h3>
-            <p>Автоматические уведомления клиенту за 24 ч и 2 ч до визита.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">04</span>
-            <h3>База клиентов</h3>
-            <p>История визитов, контакты, заметки администратора по каждому гостю.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">05</span>
-            <h3>Web-админка</h3>
-            <p>Управление услугами, мастерами и записями с компьютера владельца или админа.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">06</span>
-            <h3>Оплата / предоплата</h3>
-            <p>Интеграция ЮKassa — в пакете «Бизнес» или как доп. модуль.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">07</span>
-            <h3>RuStore и App Store</h3>
-            <p>Публикуем приложение под вашим названием и иконкой в магазинах.</p>
-          </div>
-          <div class="feature">
-            <span class="feature__num">08</span>
-            <h3>Базовая аналитика</h3>
-            <p>Записи, отмены, загрузка мастеров — цифры для принятия решений.</p>
-          </div>
+          <div class="feature-card"><span class="feature-card__num">01</span><h3>Онлайн-запись</h3><p>Услуги, мастера, свободные слоты — клиент подтверждает за минуту.</p></div>
+          <div class="feature-card"><span class="feature-card__num">02</span><h3>Календарь и журнал</h3><p>Расписание на день и неделю, статусы, отмены и переносы.</p></div>
+          <div class="feature-card"><span class="feature-card__num">03</span><h3>Push-напоминания</h3><p>Автоматические уведомления за 24 ч и 2 ч до визита.</p></div>
+          <div class="feature-card"><span class="feature-card__num">04</span><h3>База клиентов</h3><p>История визитов, контакты, заметки администратора.</p></div>
+          <div class="feature-card"><span class="feature-card__num">05</span><h3>Web-админка</h3><p>Управление услугами, мастерами и записями с компьютера.</p></div>
+          <div class="feature-card"><span class="feature-card__num">06</span><h3>Оплата / предоплата</h3><p>Интеграция ЮKassa — в пакете «Бизнес» или как модуль.</p></div>
+          <div class="feature-card"><span class="feature-card__num">07</span><h3>RuStore и App Store</h3><p>Публикуем под вашим названием и иконкой.</p></div>
+          <div class="feature-card"><span class="feature-card__num">08</span><h3>Базовая аналитика</h3><p>Записи, отмены, загрузка мастеров — цифры для решений.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- Как работаем -->
-    <section class="section section--light" id="process">
+    <!-- Process -->
+    <section class="section-padding bg-light" id="process">
       <div class="container">
         <div class="section-title">
           <h2>Как мы <span>работаем</span></h2>
-          <p>Разработка мобильного приложения под ключ — от созвона до публикации в сторах. Срок MVP — от 6 недель.</p>
+          <p>Разработка мобильного приложения под ключ — от созвона до публикации в сторах.</p>
         </div>
-
-        <div class="steps">
-          <div class="step">
-            <span class="step__num">1</span>
-            <h3>Созвон 30 мин</h3>
-            <p>Обсуждаем задачу, число мастеров и филиалов, дизайн и приоритеты функций.</p>
-          </div>
-          <div class="step">
-            <span class="step__num">2</span>
-            <h3>Смета и ТЗ</h3>
-            <p>Фиксируем пакет, срок и стоимость. Отправляем смету в течение 24 часов после заявки.</p>
-          </div>
-          <div class="step">
-            <span class="step__num">3</span>
-            <h3>Разработка</h3>
-            <p>Демо каждые 2 недели — видите прогресс и даёте обратную связь до релиза.</p>
-          </div>
-          <div class="step">
-            <span class="step__num">4</span>
-            <h3>Публикация</h3>
-            <p>Выводим в RuStore и App Store / Google Play, передаём доступы и инструкцию админу.</p>
-          </div>
+        <div class="steps-row">
+          <div class="step-card"><span class="step-card__num">1</span><h3>Созвон 30 мин</h3><p>Обсуждаем задачу, число мастеров и филиалов, приоритеты функций.</p></div>
+          <div class="step-card"><span class="step-card__num">2</span><h3>Смета и ТЗ</h3><p>Фиксируем пакет, срок и стоимость. Смета — в течение 24 часов.</p></div>
+          <div class="step-card"><span class="step-card__num">3</span><h3>Разработка</h3><p>Демо каждые 2 недели — видите прогресс до релиза.</p></div>
+          <div class="step-card"><span class="step-card__num">4</span><h3>Публикация</h3><p>RuStore и App Store / Google Play, доступы и инструкция админу.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- CTA banner (ValueAppz: marketplace-online) -->
-    <section class="marketplace-cta">
-      <div class="marketplace-cta__bg" aria-hidden="true"></div>
-      <div class="container marketplace-cta__inner">
-        <p class="marketplace-cta__label">Не откладывайте</p>
-        <h2>Своё приложение салона — в RuStore за 6 недель</h2>
-        <a href="#forma" class="btn btn--hero btn--white">Получить смету</a>
-      </div>
-    </section>
-
-    <!-- Пакеты -->
-    <section class="section" id="ceny">
+    <!-- Pricing -->
+    <section class="section-padding" id="ceny">
       <div class="container">
         <div class="section-title">
           <h2>Пакеты и <span>стоимость</span> разработки</h2>
-          <p>Стоимость разработки мобильного приложения для записи — прозрачные пакеты без скрытых платежей.</p>
+          <p>Прозрачные пакеты без скрытых платежей.</p>
         </div>
-
-        <div class="pricing-grid">
+        <div class="pricing-row">
           <article class="pricing-card">
             <h3>Старт</h3>
             <p class="pricing-card__for">Салон, пилот, 1 точка</p>
             <p class="pricing-card__price">от <strong>219 000</strong> ₽</p>
             <ul class="pricing-card__list">
-              <li>1 платформа: Android <em>или</em> iOS</li>
+              <li>1 платформа: Android или iOS</li>
               <li>Онлайн-запись, услуги, мастера</li>
               <li>Push-напоминания</li>
               <li>Web-админка</li>
               <li>Публикация в RuStore</li>
             </ul>
-            <a href="#forma" class="btn btn--outline btn--block">Выбрать Старт</a>
+            <a href="#forma" class="btn-main btn-main--outline btn-main--block">Выбрать Старт</a>
           </article>
-
           <article class="pricing-card pricing-card--featured">
             <span class="pricing-card__badge">Популярный</span>
             <h3>Бизнес</h3>
@@ -386,9 +308,8 @@
               <li>RuStore + App Store / Google Play</li>
               <li>Всё из пакета Старт</li>
             </ul>
-            <a href="#forma" class="btn btn--hero btn--block">Выбрать Бизнес</a>
+            <a href="#forma" class="btn-main btn-main--block">Выбрать Бизнес</a>
           </article>
-
           <article class="pricing-card">
             <h3>Сеть</h3>
             <p class="pricing-card__for">3+ филиала, франшиза</p>
@@ -400,247 +321,98 @@
               <li>Кастомная логика под сеть</li>
               <li>Всё из пакета Бизнес</li>
             </ul>
-            <a href="#forma" class="btn btn--outline btn--block">Обсудить Сеть</a>
+            <a href="#forma" class="btn-main btn-main--outline btn-main--block">Обсудить Сеть</a>
           </article>
         </div>
-
-        <div class="pricing-notes">
-          <p>Аванс 40–50% · Поддержка от 18 000 ₽/мес (по желанию) · Уникальный дизайн +80–150 тыс. ₽</p>
-        </div>
+        <p class="pricing-notes">Аванс 40–50% · Поддержка от 18 000 ₽/мес · Уникальный дизайн +80–150 тыс. ₽</p>
       </div>
     </section>
 
     <!-- vs YCLIENTS -->
-    <section class="section section--light" id="vs-yclients">
+    <section class="section-padding bg-light" id="vs-yclients">
       <div class="container">
         <div class="section-title">
           <h2>Своё приложение <span>или YCLIENTS</span></h2>
-          <p>Мы не конкурируем с YCLIENTS за одиночного мастера — честно подскажем, если SaaS выгоднее.</p>
+          <p>Честно подскажем, если SaaS выгоднее для вашего масштаба.</p>
         </div>
-
-        <div class="compare-table-wrap">
+        <div class="compare-wrap">
           <table class="compare-table">
             <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col">YCLIENTS / DIKIDI</th>
-                <th scope="col">Ваше приложение</th>
-              </tr>
+              <tr><th></th><th>YCLIENTS / DIKIDI</th><th>Ваше приложение</th></tr>
             </thead>
             <tbody>
-              <tr>
-                <th scope="row">Бренд в RuStore / App Store</th>
-                <td>Чужой / виджет</td>
-                <td class="compare-table__highlight"><strong>Ваш салон</strong></td>
-              </tr>
-              <tr>
-                <th scope="row">Стоимость входа</th>
-                <td>~2 000 ₽/мес</td>
-                <td class="compare-table__highlight">от 219 000 ₽ разово</td>
-              </tr>
-              <tr>
-                <th scope="row">Кастомная логика</th>
-                <td>Ограничена шаблоном</td>
-                <td class="compare-table__highlight">Полная под ваш процесс</td>
-              </tr>
-              <tr>
-                <th scope="row">TCO за 3 года</th>
-                <td>~54–144 тыс. ₽</td>
-                <td class="compare-table__highlight">219–369 тыс. ₽ + поддержка</td>
-              </tr>
-              <tr>
-                <th scope="row">Кому подходит</th>
-                <td>1 мастер, стандартный салон</td>
-                <td class="compare-table__highlight">Сеть, бренд, 2+ мастеров</td>
-              </tr>
+              <tr><th scope="row">Бренд в RuStore / App Store</th><td>Чужой / виджет</td><td class="compare-table__highlight"><strong>Ваш салон</strong></td></tr>
+              <tr><th scope="row">Стоимость входа</th><td>~2 000 ₽/мес</td><td class="compare-table__highlight">от 219 000 ₽ разово</td></tr>
+              <tr><th scope="row">Кастомная логика</th><td>Ограничена шаблоном</td><td class="compare-table__highlight">Полная под ваш процесс</td></tr>
+              <tr><th scope="row">TCO за 3 года</th><td>~54–144 тыс. ₽</td><td class="compare-table__highlight">219–369 тыс. ₽ + поддержка</td></tr>
+              <tr><th scope="row">Кому подходит</th><td>1 мастер, стандартный салон</td><td class="compare-table__highlight">Сеть, бренд, 2+ мастеров</td></tr>
             </tbody>
           </table>
         </div>
-
-        <p class="compare-note">
-          Одиночному мастеру мы честно советуем DIKIDI. Салону от 2 мастеров — своё приложение
-          с вашим названием в магазине приложений.
-        </p>
-      </div>
-    </section>
-
-    <!-- Демо / кейс -->
-    <section class="section" id="demo">
-      <div class="container">
-        <div class="section-title">
-          <h2>Пример <span>интерфейса</span> приложения</h2>
-          <p>Демо-прототип для салона на 4 мастеров: запись, выбор услуги и подтверждение визита.</p>
-        </div>
-
-        <div class="demo-layout">
-          <div class="demo-screens">
-            <figure class="demo-screen">
-              <div class="demo-screen__mock">
-                <span class="demo-screen__bar"></span>
-                <p class="demo-screen__title">Главная</p>
-                <p class="demo-screen__line">Выберите услугу</p>
-                <p class="demo-screen__line demo-screen__line--short">Маникюр · Педикюр</p>
-                <p class="demo-screen__line demo-screen__line--short">Стрижка · Окрашивание</p>
-              </div>
-              <figcaption>Главный экран</figcaption>
-            </figure>
-            <figure class="demo-screen">
-              <div class="demo-screen__mock demo-screen__mock--accent">
-                <span class="demo-screen__bar"></span>
-                <p class="demo-screen__title">Мастер и время</p>
-                <p class="demo-screen__line">Анна · 14:30</p>
-                <p class="demo-screen__line demo-screen__line--short">Ср, 12 июня</p>
-                <span class="demo-screen__btn">Записаться</span>
-              </div>
-              <figcaption>Выбор слота</figcaption>
-            </figure>
-            <figure class="demo-screen">
-              <div class="demo-screen__mock">
-                <span class="demo-screen__bar"></span>
-                <p class="demo-screen__title">Готово!</p>
-                <p class="demo-screen__line">Запись подтверждена</p>
-                <p class="demo-screen__line demo-screen__line--short">Push за 24 ч</p>
-              </div>
-              <figcaption>Подтверждение</figcaption>
-            </figure>
-          </div>
-
-          <div class="demo-aside">
-            <img src="assets/hero-phones-ref.webp" alt="Мокап приложения для салона красоты" width="400" loading="lazy">
-            <ul class="demo-list">
-              <li>Запись за 3 шага — без звонков администратору</li>
-              <li>Ваш логотип и цвета салона</li>
-              <li>Push-напоминание клиенту перед визитом</li>
-            </ul>
-            <a href="#forma" class="btn btn--hero">Заказать разработку</a>
-          </div>
-        </div>
+        <p class="compare-note">Одиночному мастеру советуем DIKIDI. Салону от 2 мастеров — своё приложение с вашим названием в магазине.</p>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section section--light" id="faq">
+    <section class="section-padding" id="faq">
       <div class="container container--narrow">
         <div class="section-title">
           <h2>Частые <span>вопросы</span></h2>
           <p>Ответы про стоимость, сроки и отличие от программы для записи в браузере.</p>
         </div>
-
-        <div class="faq" role="list">
+        <div class="faq">
           <details class="faq__item" open>
             <summary class="faq__question">Сколько стоит приложение для записи клиентов?</summary>
-            <div class="faq__answer">
-              <p>От 219 000 ₽ (пакет «Старт», одна платформа) до 549 000 ₽+ для сети салонов.
-              Точная смета — после короткого созвона, отправляем в течение 24 часов.</p>
-            </div>
+            <div class="faq__answer"><p>От 219 000 ₽ (пакет «Старт») до 549 000 ₽+ для сети. Точная смета — после короткого созвона, отправляем в течение 24 часов.</p></div>
           </details>
-
           <details class="faq__item">
             <summary class="faq__question">За сколько сделаете?</summary>
-            <div class="faq__answer">
-              <p>MVP для одного салона — от 6 недель. Сеть с филиалами — от 10–12 недель в зависимости от ТЗ.</p>
-            </div>
+            <div class="faq__answer"><p>MVP для одного салона — от 6 недель. Сеть с филиалами — от 10–12 недель.</p></div>
           </details>
-
           <details class="faq__item">
             <summary class="faq__question">Нужен ли свой сервер?</summary>
-            <div class="faq__answer">
-              <p>Да, нужен backend и база данных. Мы разворачиваем на вашем или арендованном VPS,
-              передаём доступы. Стоимость хостинга — от ~1 500 ₽/мес, не входит в разработку.</p>
-            </div>
+            <div class="faq__answer"><p>Да. Разворачиваем backend на VPS, передаём доступы. Хостинг — от ~1 500 ₽/мес, не входит в разработку.</p></div>
           </details>
-
           <details class="faq__item">
-            <summary class="faq__question">Чем отличается от программы для записи в браузере?</summary>
-            <div class="faq__answer">
-              <p>Мобильное приложение — ваш бренд в RuStore и App Store, push-уведомления,
-              быстрый доступ с иконки на телефоне. Браузерная программа — это виджет на чужом домене.</p>
-            </div>
+            <summary class="faq__question">Чем отличается от программы в браузере?</summary>
+            <div class="faq__answer"><p>Ваш бренд в RuStore и App Store, push-уведомления, доступ с иконки на телефоне. Браузерная программа — виджет на чужом домене.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">Можно ли потом добавить оплату?</summary>
-            <div class="faq__answer">
-              <p>Да. Оплата через ЮKassa входит в пакет «Бизнес» или добавляется отдельным модулем (+50–80 тыс. ₽).</p>
-            </div>
-          </details>
-
           <details class="faq__item">
             <summary class="faq__question">Публикуете в RuStore сами?</summary>
-            <div class="faq__answer">
-              <p>Да, берём на себя подготовку материалов, модерацию и публикацию под аккаунтом салона или нашим с передачей прав.</p>
-            </div>
+            <div class="faq__answer"><p>Да, берём на себя подготовку материалов, модерацию и публикацию.</p></div>
           </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">Делаете только beauty или другие ниши?</summary>
-            <div class="faq__answer">
-              <p>Фокус — салоны красоты, барбершопы и бьюти-сети. Другие ниши (фитнес, автосервис) — по запросу, но основной опыт в beauty.</p>
-            </div>
-          </details>
-
           <details class="faq__item">
             <summary class="faq__question">Уже пользуемся YCLIENTS — имеет смысл своё?</summary>
-            <div class="faq__answer">
-              <p>Имеет, если важен бренд в сторе, особая логика (сеть, франшиза) или вы outgrow SaaS.
-              Можем интегрировать с YCLIENTS через API (+60–100 тыс. ₽).</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">Какая гарантия и договор?</summary>
-            <div class="faq__answer">
-              <p>Работаем по договору ИП: фиксируем этапы, сроки и оплату. Гарантия на исправление багов — 3 месяца после сдачи.</p>
-            </div>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">Что после запуска?</summary>
-            <div class="faq__answer">
-              <p>Опциональная поддержка от 18 000 ₽/мес: обновления OS, мелкие доработки, мониторинг.
-              Обучаем администратора работе с панелью.</p>
-            </div>
+            <div class="faq__answer"><p>Имеет, если важен бренд в сторе, сеть или особая логика. Можем интегрировать с YCLIENTS через API.</p></div>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Форма -->
-    <section class="section section--form" id="forma">
+    <!-- Form -->
+    <section class="section-padding section-form" id="forma">
       <div class="container">
         <div class="form-layout">
           <div class="form-layout__info">
             <h2>Получите смету за <span>24 часа</span></h2>
-            <p>Оставьте заявку — перезвоним в течение 24 часов. Укажите число мастеров, чтобы мы сразу предложили подходящий пакет.</p>
+            <p>Оставьте заявку — перезвоним в течение 24 часов. Укажите число мастеров для подбора пакета.</p>
             <ul class="form-benefits">
               <li>Бесплатный созвон 30 минут</li>
               <li>Фиксированная смета без сюрпризов</li>
               <li>Договор ИП, поэтапная оплата</li>
             </ul>
-            <p class="form-telegram">
-              Или напишите в Telegram:
-              <a href="https://t.me/antonbutov" target="_blank" rel="noopener noreferrer" data-goal="click_telegram">@antonbutov</a>
-            </p>
+            <p class="form-telegram">Или Telegram: <a href="https://t.me/antonbutov" target="_blank" rel="noopener noreferrer" data-goal="click_telegram">@antonbutov</a></p>
           </div>
-
-          <form
-            class="lead-form"
-            id="lead-form"
-            action="https://formspree.io/f/xreveddq"
-            method="POST"
-            novalidate
-          >
+          <form class="lead-form" id="lead-form" action="https://formspree.io/f/xreveddq" method="POST" novalidate>
             <input type="hidden" name="_subject" value="Заявка с лендинга — приложение для салона">
             <div class="form-field">
               <label for="name">Имя</label>
               <input type="text" id="name" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
             </div>
-
             <div class="form-field">
               <label for="phone">Телефон</label>
               <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+7 (999) 123-45-67">
             </div>
-
             <div class="form-field">
               <label for="business">Тип бизнеса</label>
               <select id="business" name="business" required>
@@ -651,7 +423,6 @@
                 <option value="other">Другое</option>
               </select>
             </div>
-
             <div class="form-field">
               <label for="masters">Сколько мастеров / точек?</label>
               <select id="masters" name="masters" required>
@@ -662,13 +433,11 @@
                 <option value="network">3+ точки (сеть)</option>
               </select>
             </div>
-
             <div class="form-field">
               <label for="comment">Комментарий <span class="form-optional">(необязательно)</span></label>
               <textarea id="comment" name="comment" rows="3" placeholder="Расскажите о задаче"></textarea>
             </div>
-
-            <button type="submit" class="btn btn--hero btn--block">Отправить заявку</button>
+            <button type="submit" class="btn-main btn-main--block">Отправить заявку</button>
             <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
           </form>
         </div>
@@ -676,23 +445,26 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <a href="/" class="logo logo--footer">
-          <img class="logo__img" src="assets/logo.svg" width="44" height="44" alt="">
-          <span class="logo__name">SalonApp Dev</span>
+  <footer class="site-footer">
+    <div class="container">
+      <div>
+        <a href="/" class="navbar-brand">
+          <img src="assets/logo.svg" width="40" height="40" alt="">
+          <span class="brand-text"><span class="brand-name">SalonApp Dev</span></span>
         </a>
-        <p class="footer__copy">© 2026 SalonApp Dev. Разработка приложений для записи клиентов.</p>
+        <p class="site-footer__copy">© 2026 SalonApp Dev. Разработка приложений для записи клиентов.</p>
       </div>
-
-      <div class="footer__legal">
+      <div class="site-footer__legal">
         <p>ИП Бутов Антон Сергеевич</p>
         <p>ИНН 614302304615 · ОГРНИП 326619600045863</p>
         <p><a href="mailto:mail@antonbutov.com">mail@antonbutov.com</a> · <a href="https://t.me/antonbutov" data-goal="click_telegram">Telegram</a></p>
       </div>
     </div>
   </footer>
+
+  <a href="https://t.me/antonbutov" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Telegram" data-goal="click_telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+  </a>
 
   <script src="js/main.js"></script>
 </body>

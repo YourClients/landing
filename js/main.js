@@ -1,23 +1,37 @@
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav');
+const menuToggler = document.querySelector('.menu-toggler');
+const navbarNav = document.querySelector('.navbar-nav');
 
-if (burger && nav) {
-  burger.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('is-open');
-    burger.setAttribute('aria-expanded', String(isOpen));
-    burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+if (menuToggler && navbarNav) {
+  menuToggler.addEventListener('click', () => {
+    const isOpen = navbarNav.classList.toggle('is-open');
+    menuToggler.setAttribute('aria-expanded', String(isOpen));
+    menuToggler.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
   });
 
-  nav.querySelectorAll('a').forEach((link) => {
+  navbarNav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      burger.setAttribute('aria-expanded', 'false');
-      burger.setAttribute('aria-label', 'Открыть меню');
+      navbarNav.classList.remove('is-open');
+      menuToggler.setAttribute('aria-expanded', 'false');
+      menuToggler.setAttribute('aria-label', 'Открыть меню');
     });
   });
 }
 
-// FAQ: only one open at a time on mobile-friendly accordion
+// Tabs
+const tabButtons = document.querySelectorAll('[data-tab]');
+const tabPanels = document.querySelectorAll('[data-tab-panel]');
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.tab;
+    tabButtons.forEach((b) => b.classList.toggle('is-active', b === btn));
+    tabPanels.forEach((panel) => {
+      panel.classList.toggle('is-active', panel.dataset.tabPanel === id);
+    });
+  });
+});
+
+// FAQ: one open at a time
 const faqItems = document.querySelectorAll('.faq__item');
 faqItems.forEach((item) => {
   item.addEventListener('toggle', () => {
@@ -61,8 +75,7 @@ if (leadForm && formStatus) {
       const result = await response.json().catch(() => ({}));
 
       if (!response.ok) {
-        const message = result.error || 'Не удалось отправить форму';
-        throw new Error(message);
+        throw new Error(result.error || 'Не удалось отправить форму');
       }
 
       if (typeof ym === 'function') {
@@ -81,7 +94,6 @@ if (leadForm && formStatus) {
   });
 }
 
-// Telegram / phone click goals
 document.querySelectorAll('[data-goal]').forEach((el) => {
   el.addEventListener('click', () => {
     const goal = el.dataset.goal;
