@@ -201,9 +201,21 @@ ul { list-style: none; }
 }
 
 .home-banner--beauty {
-  min-height: 620px;
-  padding: 118px 0 72px;
-  background: #fdfbf9 url('../assets/hero-phones-ref.webp') no-repeat right bottom / 780px auto;
+  min-height: 680px;
+  padding: 118px 0 0;
+  background: var(--bg-cream);
+}
+
+/* Salon photo — ValueAppz inner-banner-salon-beauty */
+.home-banner--beauty::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80&auto=format&fit=crop') 72% 38% / cover no-repeat;
+  filter: brightness(1.5) saturate(0.18) contrast(0.88);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .home-banner--beauty::before {
@@ -211,16 +223,33 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(253, 251, 249, 1) 0%,
-    rgba(253, 251, 249, 0.98) 38%,
-    rgba(253, 251, 249, 0.88) 48%,
+    100deg,
+    rgba(253, 251, 249, 0.99) 0%,
+    rgba(253, 251, 249, 0.97) 36%,
+    rgba(253, 251, 249, 0.9) 48%,
     rgba(253, 251, 249, 0.55) 58%,
-    rgba(253, 251, 249, 0.15) 72%,
-    transparent 82%
+    rgba(253, 251, 249, 0.18) 68%,
+    transparent 78%
   );
   z-index: 1;
   pointer-events: none;
+}
+
+.home-banner__img {
+  position: absolute;
+  right: max(0px, calc((100% - var(--container)) / 2 + 1rem));
+  bottom: 0;
+  width: 580px;
+  max-width: 44%;
+  z-index: 2;
+  pointer-events: none;
+  line-height: 0;
+}
+
+.home-banner__img img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .home-banner__caption {
@@ -1186,7 +1215,12 @@ ul { list-style: none; }
   }
 
   .home-banner--beauty {
-    background-size: 620px auto;
+    padding-bottom: 0;
+  }
+
+  .home-banner__img {
+    width: 46%;
+    max-width: 520px;
   }
 
   .model-block__inner {
@@ -1242,9 +1276,17 @@ ul { list-style: none; }
   }
 
   .home-banner--beauty {
-    padding: 100px 0 48px;
-    background-position: center bottom;
-    background-size: min(92vw, 520px) auto;
+    padding: 100px 0 0;
+    min-height: auto;
+  }
+
+  .home-banner__img {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(100%, 460px);
+    max-width: 100%;
+    margin: 2rem auto 0;
   }
 
   .home-banner__grid {
