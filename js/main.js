@@ -74,7 +74,7 @@ if (leadForm && formStatus) {
       leadForm.reset();
     } catch {
       formStatus.classList.add('is-error');
-      formStatus.textContent = 'Ошибка отправки. Напишите в Telegram: @antonbutov';
+      formStatus.textContent = 'Ошибка отправки. Напишите на mail@antonbutov.com или в Telegram: @antonbutov';
     } finally {
       if (submitBtn) submitBtn.disabled = false;
     }
