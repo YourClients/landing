@@ -7,14 +7,14 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: deploy-ycliend-${{ github.ref }}
+  group: deploy-yclients-${{ github.ref }}
   cancel-in-progress: false
 
 env:
   DEPLOY_HOST: 91.207.75.72
-  DEPLOY_PATH: /opt/ycliend-landing
-  WEB_ROOT: /var/www/ycliend.antonbutov.com
-  SITE_DOMAIN: ycliend.antonbutov.com
+  DEPLOY_PATH: /opt/yclients-landing
+  WEB_ROOT: /var/www/yclients.antonbutov.com
+  SITE_DOMAIN: yclients.antonbutov.com
 
 jobs:
   check:
@@ -31,7 +31,7 @@ jobs:
           echo "Landing OK"
 
   deploy:
-    name: Deploy to ycliend.antonbutov.com
+    name: Deploy to yclients.antonbutov.com
     runs-on: ubuntu-latest
     needs: check
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')

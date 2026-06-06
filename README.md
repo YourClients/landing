@@ -1,6 +1,6 @@
 # Landing — приложение для записи клиентов (салон красоты)
 
-Статический лендинг. Деплой на **91.207.75.72** → **https://ycliend.antonbutov.com**
+Статический лендинг. Деплой на **91.207.75.72** → **https://yclients.antonbutov.com**
 
 ## DNS
 
@@ -8,18 +8,18 @@
 
 | Тип | Имя / Host | Значение | TTL |
 |-----|------------|----------|-----|
-| **A** | `ycliend` | `91.207.75.72` | 300–3600 |
+| **A** | `yclients` | `91.207.75.72` | 300–3600 |
 
-Итог: `ycliend.antonbutov.com` → `91.207.75.72`
+Итог: `yclients.antonbutov.com` → `91.207.75.72`
 
 Проверка после propagation (5–60 мин):
 
 ```bash
-dig +short ycliend.antonbutov.com
+dig +short yclients.antonbutov.com
 # должно вернуть: 91.207.75.72
 ```
 
-> Если нужен домен **yclients**.antonbutov.com (с «s») — поменяйте `SITE_DOMAIN` в `.github/workflows/ci.yml` и файлы в `deploy/`.
+> Опечатка `ycliend.antonbutov.com` редиректится на `yclients.antonbutov.com`.
 
 ## GitHub Secrets
 
@@ -36,16 +36,16 @@ dig +short ycliend.antonbutov.com
 На своём компьютере:
 
 ```bash
-ssh-keygen -t ed25519 -C "github-actions-ycliend-landing" -f deploy_ycliend_ed25519 -N ""
+ssh-keygen -t ed25519 -C "github-actions-yclients-landing" -f deploy_yclients_ed25519 -N ""
 ```
 
 На сервере (`91.207.75.72`):
 
 ```bash
-cat deploy_ycliend_ed25519.pub >> ~/.ssh/authorized_keys
+cat deploy_yclients_ed25519.pub >> ~/.ssh/authorized_keys
 ```
 
-В GitHub → Secret `DEPLOY_SSH_PRIVATE_KEY` — **полное содержимое** файла `deploy_ycliend_ed25519` (включая `BEGIN` / `END`).
+В GitHub → Secret `DEPLOY_SSH_PRIVATE_KEY` — **полное содержимое** файла `deploy_yclients_ed25519` (включая `BEGIN` / `END`).
 
 Если уже деплоите **lite.masterdoc.pro** с того же сервера — можно **переиспользовать** те же `DEPLOY_SSH_PRIVATE_KEY` и `DEPLOY_USER`.
 
@@ -54,7 +54,7 @@ cat deploy_ycliend_ed25519.pub >> ~/.ssh/authorized_keys
 Push в `main` → GitHub Actions:
 
 1. Проверка файлов лендинга  
-2. `rsync` в `/var/www/ycliend.antonbutov.com`  
+2. `rsync` в `/var/www/yclients.antonbutov.com`  
 3. Установка nginx + certbot (при первом деплое, после настройки DNS)
 
 Ручной запуск: Actions → **CI** → **Run workflow**.
