@@ -79,7 +79,7 @@ if (leadForm && formStatus) {
       }
 
       if (typeof ym === 'function') {
-        ym(window.YANDEX_METRIKA_ID, 'reachGoal', 'lead_submit');
+        ym(window.YANDEX_METRIKA_ID, 'reachGoal', 'call');
       }
 
       formStatus.classList.add('is-success');
