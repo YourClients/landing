@@ -1,5 +1,12 @@
 const menuToggler = document.querySelector('.menu-toggler');
 const navbarNav = document.querySelector('.navbar-nav');
+const YANDEX_METRIKA_COUNTER_ID = 109704360;
+
+function reachMetrikaGoal(goalName) {
+  if (typeof window !== 'undefined' && typeof window.ym === 'function' && goalName) {
+    window.ym(YANDEX_METRIKA_COUNTER_ID, 'reachGoal', goalName);
+  }
+}
 
 if (menuToggler && navbarNav) {
   menuToggler.addEventListener('click', () => {
@@ -78,9 +85,8 @@ if (leadForm && formStatus) {
         throw new Error(result.error || 'Не удалось отправить форму');
       }
 
-      if (typeof ym === 'function') {
-        ym(window.YANDEX_METRIKA_ID, 'reachGoal', 'call');
-      }
+      reachMetrikaGoal('lead_form_submit');
+      reachMetrikaGoal('call');
 
       formStatus.classList.add('is-success');
       formStatus.textContent = 'Заявка принята! Свяжемся в течение 24 часов.';
@@ -94,11 +100,15 @@ if (leadForm && formStatus) {
   });
 }
 
-document.querySelectorAll('[data-goal]').forEach((el) => {
-  el.addEventListener('click', () => {
-    const goal = el.dataset.goal;
-    if (typeof ym === 'function' && goal) {
-      ym(window.YANDEX_METRIKA_ID, 'reachGoal', goal);
-    }
+document.querySelectorAll('a[href="#forma"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    reachMetrikaGoal('cta_to_form');
+  });
+});
+
+document.querySelectorAll('a[href^="https://t.me/antonbutov"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    reachMetrikaGoal('telegram_click');
+    reachMetrikaGoal('call');
   });
 });
